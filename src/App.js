@@ -6,6 +6,7 @@ import { Events } from "./Pages/Events"
 import { Plays } from "./Pages/Plays"
 import { Sports } from "./Pages/Sports"
 import { Stream } from "./Pages/stream"
+import { Footer } from "./Footer/Footer"
 function App() {
     return (
         <>
@@ -20,6 +21,7 @@ function App() {
                     <Route path="/stream" element={<Stream />}></Route>
                     <Route path="*" element={<h4>Page Not Found</h4>}></Route>
                 </Routes>
+                <Footer/>
             </div>
 
 
