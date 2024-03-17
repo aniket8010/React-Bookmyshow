@@ -18,6 +18,10 @@ h6 {
 body {
     font-family: "Roboto", sans-serif;
 }
+body::-webkit-scrollbar{
+  width: 0px !important;
+}
+
 
 .roboto-thin {
     font-family: "Roboto", sans-serif;
