@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom"
 import { Header } from "./Header"
-import { Movies } from "./Pages/Movies"
+import { Movies } from "./Pages/Movies/Movies"
 import { Activities } from "./Pages/Activities"
 import { Events } from "./Pages/Events"
 import { Plays } from "./Pages/Plays"
