@@ -145,3 +145,12 @@ input::placeholder {
 .a_h15{
   font-size: 15px;
 }
+.a_cursor_pointer{
+  cursor: pointer;
+}
+.a_user_select_none{
+  user-select: none;
+}
+.a_redlite_color2{
+  color: #DC354B;
+}
