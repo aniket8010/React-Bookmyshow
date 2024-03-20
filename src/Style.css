@@ -142,6 +142,18 @@ input::placeholder {
 .a_h15{
   font-size: 15px;
 }
+.a_h16{
+  font-size: 16px;
+}
+.a_h17{
+  font-size: 17px;
+}
+.a_h18{
+  font-size: 18px;
+}
+.a_h19{
+  font-size: 19px;
+}
 .a_cursor_pointer{
   cursor: pointer;
 }
@@ -150,4 +162,7 @@ input::placeholder {
 }
 .a_redlite_color2{
   color: #DC354B;
+}
+.a_border_red_lite{
+  border: 1px solid #DC354B !important;
 }
