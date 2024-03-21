@@ -5,8 +5,8 @@ import { Activities } from "./Pages/Activities"
 import { Events } from "./Pages/Events"
 import { Plays } from "./Pages/Plays"
 import { Sports } from "./Pages/Sports"
-import { Stream } from "./Pages/stream"
 import { Footer } from "./Footer/Footer"
+import { Stream } from "./Pages/Stream/Stream"
 function App() {
     return (
         <>
@@ -23,8 +23,6 @@ function App() {
                 </Routes>
                 <Footer/>
             </div>
-
-
         </>
     )
 }
