@@ -2,6 +2,7 @@ import React from 'react'
 import "./Stream.css"
 import { Carousel } from 'react-responsive-carousel'
 import { PromotedBanner } from './PromotedBanner'
+import { MultiMovieCard } from '../../Components/MultiMovie/MultiMovieCard'
 
 const streamData = [
   {
@@ -94,6 +95,57 @@ export const Stream = () => {
           return <PromotedBanner key={index} description={value.description} language={value.language} slug={value.slug} movieName={value.movieName} title={value.title} isPremiere imgcardpath={value.imgcardpath} path={value.path} />
         })}
       </Carousel>
+      <div className="container">
+        <MultiMovieCard title={"Premiere Of the Week"} srcData={[
+          "Image/StreamMoviecard/1.avif",
+          "Image/StreamMoviecard/et00027332-qdlvmpbsmg-portrait.avif",
+          "Image/StreamMoviecard/et00354663-zvhcanmgub-portrait.avif",
+          "Image/StreamMoviecard/et00390762-ndlazdqnzr-portrait.avif",
+          "Image/StreamMoviecard/et00391374-rhpevagccv-portrait.avif",
+          "Image/StreamMoviecard/et00391871-pkgccfrsaa-portrait.avif",
+        ]} />
+        <MultiMovieCard title={"New On Stream"} isShowAll srcData={[
+          "Image/StreamMoviecard/21.avif",
+          "Image/StreamMoviecard/22.avif",
+          "Image/StreamMoviecard/23.avif",
+          "Image/StreamMoviecard/24.avif",
+          "Image/StreamMoviecard/25.avif",
+          "Image/StreamMoviecard/26.avif",
+          "Image/StreamMoviecard/27.avif",
+          "Image/StreamMoviecard/28.avif",
+          "Image/StreamMoviecard/29.avif",
+          "Image/StreamMoviecard/30.avif",
+        ]} />
+        <MultiMovieCard title={"Upcoming Releases"} srcData={[
+          "Image/StreamMoviecard/31.avif",
+          "Image/StreamMoviecard/32.avif",
+          "Image/StreamMoviecard/33.avif",
+        ]} />
+        <MultiMovieCard title={"Top 10 TV Shows"} srcData={[
+          "Image/StreamMoviecard/41.avif",
+          "Image/StreamMoviecard/42.avif",
+          "Image/StreamMoviecard/43.avif",
+          "Image/StreamMoviecard/44.avif",
+          "Image/StreamMoviecard/45.avif",
+          "Image/StreamMoviecard/46.avif",
+          "Image/StreamMoviecard/47.avif",
+          "Image/StreamMoviecard/48.avif",
+          "Image/StreamMoviecard/49.avif",
+          "Image/StreamMoviecard/50.avif",
+        ]} />
+        <MultiMovieCard title={"New On Stream"} isShowAll srcData={[
+          "Image/StreamMoviecard/21.avif",
+          "Image/StreamMoviecard/22.avif",
+          "Image/StreamMoviecard/23.avif",
+          "Image/StreamMoviecard/24.avif",
+          "Image/StreamMoviecard/25.avif",
+          "Image/StreamMoviecard/26.avif",
+          "Image/StreamMoviecard/27.avif",
+          "Image/StreamMoviecard/28.avif",
+          "Image/StreamMoviecard/29.avif",
+          "Image/StreamMoviecard/30.avif",
+        ]} />
+      </div>
     </section>
   )
 }
