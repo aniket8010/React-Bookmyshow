@@ -27,7 +27,7 @@ export const Header = () => {
                                 </div>
                             </div>
                         </div>
-                        <div style={{cursor:"pointer"}} className="col-12 col-md-3">
+                        <div style={{ cursor: "pointer" }} className="col-12 col-md-3">
                             <div className="row align-items-center  text-end justify-content-end">
                                 <div className="col-12 col-md-10 align-items-center d-flex  justify-content-end gap-4">
                                     <div className='d-flex gap-2'>
@@ -59,16 +59,16 @@ export const Header = () => {
                         <div className="col-12 col-md-3">
                             <ul className='d-flex gap-3 justify-content-end'>
                                 <li>
-                                    <span>ListYourShow</span>
+                                    <NavLink to={"/list-your-shows"}><span>ListYourShow</span></NavLink>
                                 </li>
                                 <li>
-                                    <span>Corporate</span>
+                                    <NavLink to={"/corporates"}><span>Corporate</span></NavLink>
                                 </li>
                                 <li>
-                                    <span>Offers</span>
+                                    <NavLink to={"/offers"}><span>Offers</span></NavLink>
                                 </li>
                                 <li>
-                                    <span>Gift Cards</span>
+                                    <NavLink to={"/gift-cards"}><span>Gift Cards</span></NavLink>
                                 </li>
                             </ul>
                         </div>

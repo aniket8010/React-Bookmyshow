@@ -1,0 +1,9 @@
+.a_banner_card_img_box{
+    height: 268px;
+    width: 100%;
+}
+.a_banner_card_img_box img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}

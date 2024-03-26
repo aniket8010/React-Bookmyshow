@@ -5,7 +5,7 @@ export const AppliedFilter = ({ title, buttons }) => {
     return (
         <div>
             <h4>{title}</h4>
-            <div className='d-flex gap-2 mt-2 flex-wrap'>
+            <div className='d-flex gap-2 mt-4 flex-wrap'>
                 {buttons.map((ele) => {
                  return   <Button isRounded={true} title={ele} />
                 })}
