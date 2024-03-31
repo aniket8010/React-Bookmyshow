@@ -1,0 +1,25 @@
+.a_partner h6,
+.a_solutions h6 {
+  letter-spacing: 2px;
+  font-weight: 400;
+}
+.a_solutions {
+  padding: 0 !important;
+}
+.a_solutions .a_card {
+  height: 400px;
+  background-position: center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.a_movies_carousel .react-multiple-carousel__arrow--right{
+    right: calc(0% + 1px);
+    background: rgb(134 134 134 / 80%) !important;
+}
+.a_movies_carousel .react-multiple-carousel__arrow--left{
+    left: calc(0% + 1px);
+    background: rgb(134 134 134 / 80%) !important;
+}

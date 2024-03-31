@@ -4,7 +4,8 @@ import Flickity from 'react-flickity-component'
 import { BannerCard } from './BannerCard'
 
 const flickityOptions = {
-    initialIndex: 2
+    initialIndex: 2,
+    wrapAround:true
 }
 
 export const Carousel = () => {

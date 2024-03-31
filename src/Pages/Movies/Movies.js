@@ -115,8 +115,8 @@ export const Movies = () => {
               />
             </div>
             <div className="row">
-              {MoviesData.map((value) => {
-                return <div className="col-12 col-lg-4 col-xl-3 col-md-6 col-sm-12">
+              {MoviesData.map((value,index) => {
+                return <div key={index} className="col-12 col-lg-4 col-xl-3 col-md-6 col-sm-12">
                   <MyCard src={value.src} name={value.movieName} title1={value.movieCertificate} title2={value.language}/>
                 </div>
               })}

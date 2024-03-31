@@ -1,11 +1,11 @@
 import React from 'react'
 import "./Footer.css"
-import { Navigations } from './Navigations'
 import { Description } from './Description'
 import { ContactToday } from './ContactToday'
 import { Services } from './Services'
 import { MenuLinks } from './MenuLinks'
 import { SocialLinks } from './SocialLinks'
+import Navigations from './Navigations'
 
 export const Footer = () => {
   return (

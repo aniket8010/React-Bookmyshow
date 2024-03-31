@@ -1,3 +1,5 @@
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import 'react-multi-carousel/lib/styles.css';
 import { Routes, Route } from "react-router-dom"
 import { Header } from "./Header"
 import { Movies } from "./Pages/Movies/Movies"
@@ -11,6 +13,8 @@ import { Shows } from "./Pages/Shows/Shows"
 import { Corporates } from "./Pages/Corporates/Corporates"
 import { Offers } from "./Pages/Offers/Offers"
 import { GiftCards } from "./Pages/GiftCards/GiftCards"
+
+
 function App() {
     return (
         <>

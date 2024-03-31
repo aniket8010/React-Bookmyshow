@@ -6,8 +6,6 @@ import { NavLink } from 'react-router-dom';
 
 export const Header = () => {
     return (
-
-
         <header>
             <div className='a_top bg-white py-1'>
                 <div style={{ width: "84%" }} className="container ">
@@ -33,7 +31,7 @@ export const Header = () => {
                                     <div className='d-flex gap-2'>
                                         <span>Sambhajinagar</span> <IoChevronDownSharp color="#6B7188" className="mt-1" />
                                     </div>
-                                    <button type="button" class="text-white btn btn-sm a_redlite_color px-3 a_sign_btn">Sign in</button>
+                                    <button type="button" className="text-white btn btn-sm a_redlite_color px-3 a_sign_btn">Sign in</button>
                                 </div>
                                 <div className="col-12 col-md-2">
                                     <RxHamburgerMenu size={25} />
