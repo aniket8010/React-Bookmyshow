@@ -20,8 +20,8 @@ export const FilterComp = ({ buttons, title }) => {
                     <h6 className='a_h13 text-secondary'>Clear</h6>
                 </div>
                 {open && <div className='mt-3 d-flex flex-wrap gap-2'>
-                    {buttons.map((value) => {
-                        return <Button key={value} title={value} />
+                    {buttons.map((value,index) => {
+                        return <Button key={index} title={value} />
                     })}
 
                 </div>}

@@ -191,8 +191,8 @@ export const Events = () => {
         <div className="row">
           <div className="col-12 col-md-3 ps-0">
             <h4>Filters</h4>
-            {data.map((value) => {
-              return <FilterComp key={value.title} buttons={value.buttons} title={value.title} />
+            {data.map((value,index) => {
+              return <FilterComp key={index} buttons={value.buttons} title={value.title} />
             })}
             <Button btnType="outline" title={"Browse by Venues"} />
           </div>
