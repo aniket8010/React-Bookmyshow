@@ -15,11 +15,36 @@
   justify-content: center;
   align-items: center;
 }
-.a_movies_carousel .react-multiple-carousel__arrow--right{
-    right: calc(0% + 1px);
-    background: rgb(134 134 134 / 80%) !important;
+.a_movies_carousel .react-multiple-carousel__arrow--right {
+  right: calc(0% + 1px);
+  background: rgb(134 134 134 / 80%) !important;
 }
-.a_movies_carousel .react-multiple-carousel__arrow--left{
-    left: calc(0% + 1px);
-    background: rgb(134 134 134 / 80%) !important;
+.a_movies_carousel .react-multiple-carousel__arrow--left {
+  left: calc(0% + 1px);
+  background: rgb(134 134 134 / 80%) !important;
+}
+.a_our_products p {
+  margin: 0 !important;
+  margin-bottom: 2px !important;
+  font-size: 18px !important;
+}
+.a_our_products .a_box {
+  padding: 50px;
+  background-repeat: no-repeat !important;
+  display: flex;
+  flex-direction: column;
+  background-size: cover !important;
+}
+.a_bulk_booking {
+  padding: 80px 50px;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+}
+.a_testimonials2 .a_img_box {
+  width: 140px;
+  height: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
 }

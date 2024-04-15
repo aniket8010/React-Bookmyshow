@@ -1,0 +1,89 @@
+.a_gift_cards .a_btns button {
+  width: 220px;
+  height: 50px;
+  color: rgb(96, 93, 93);
+  font-weight: 500;
+}
+.a_gift_cards .a_btns button.active {
+  background: white;
+}
+.a_gift_cards .a_e_gift_btn {
+  border: 1px solid #5e5c5e;
+  background: none;
+  border-radius: 50px;
+  font-weight: 400;
+  padding: 5px 15px;
+  font-size: 12px;
+  color: rgb(42, 42, 42);
+}
+.a_gift_cards .a_e_gift_btn.active {
+  background: #f84464;
+  color: white;
+  border: 1px solid #f84464;
+}
+.a_e_gift .a_hover_content_box {
+  height: 185px;
+  border-radius: 10px;
+  border: 1px solid #cac7c7;
+  position: relative;
+}
+.a_e_gift .a_hover_content_box .a_content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  width: 100%;
+  display: none;
+  flex-direction: column;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+}
+.a_e_gift .a_hover_content_box:hover .a_content {
+  display: flex;
+}
+.a_e_gift .a_hover_content_box .a_content h6 {
+  font-weight: 400;
+}
+.a_e_gift .a_hover_content_box .a_img_box {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+.a_e_gift .a_hover_content_box .a_img_box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.a_physical .a_img_box {
+  height: 80px;
+  width: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.a_physical .a_img_box img {
+  width: 100%;
+  object-fit: contain;
+  height: 100%;
+}
+.a_physical .col-md-2 {
+  width: 20% !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.a_physical .a_icon {
+  width: 45px;
+  height: 45px;
+  border: 1px solid #808080;
+  color: #808080;
+  cursor: pointer;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -585,7 +585,7 @@ export const offersData = [
     },
     {
         backgroundImgUrl: "Image/Offers/2w.avif",
-        logoUrl:"Image/Offers/Mobikwik.avif",
+        logoUrl: "Image/Offers/Mobikwik.avif",
         description: "Book Tickets using Mobikwik Wallet or ZIP Pay Later and Get upto 10% cashback",
         cardType: "wallet",
         title: "Mobikwik Cashback Offer",

@@ -13,6 +13,7 @@ import { Shows } from "./Pages/Shows/Shows"
 import { Corporates } from "./Pages/Corporates/Corporates"
 import { Offers } from "./Pages/Offers/Offers"
 import { GiftCards } from "./Pages/GiftCards/GiftCards"
+import { Details } from "./Pages/Details/Details";
 
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
                     <Route path="/corporates" element={<Corporates />}></Route>
                     <Route path="/offers" element={<Offers />}></Route>
                     <Route path="/gift-cards" element={<GiftCards />}></Route>
+                    <Route path="/details" element={<Details />}></Route>
                     <Route path="*" element={<h4>Page Not Found</h4>}></Route>
                 </Routes>
                 <Footer />
