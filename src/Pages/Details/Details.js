@@ -5,7 +5,8 @@ import Banner from './Banner'
 import CastsAndCrew from './CastsAndCrew'
 
 export const Details = () => {
-  const { state } = useLocation
+  const { state } = useLocation()
+
   return (
     <section>
       <Banner />
