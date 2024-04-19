@@ -16,7 +16,7 @@ const MoviesData = [
     description: "Hindi",
     movieDetails: {
       rating: 6.4,
-      lastDate: "2024-04-17",
+      lastDate: "2024-04-30",
       casts: [
         {
           imgPath:
@@ -221,7 +221,7 @@ export const Movies = () => {
               />
             </div>
             <div className="row">
-              {MoviesData.map((value,index) => {
+              {MoviesData.map((value, index) => {
                 return <div key={index} className="col-12 col-lg-4 col-xl-3 col-md-6 col-sm-12">
                   <MyCard {...value} />
                 </div>

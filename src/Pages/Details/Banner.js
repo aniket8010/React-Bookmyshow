@@ -12,7 +12,7 @@ const Banner = () => {
     const navigate = useNavigate()
 
     function BookTicketsHandler() {
-        navigate("/book-tickets",{state:{name: state?.name, languages: state?.languages, screens: state?.screens, certification: state?.slugInfo?.certification, category: state?.slugInfo?.category, lastDate: state?.lastDate }})
+        navigate("/book-tickets", { state: { name: state?.name, languages: state?.languages, screens: state?.screens, certification: state?.slugInfo?.certification, category: state?.slugInfo?.category, lastDate: state?.lastDate } })
     }
     return (
         <div className="a_movies_details"

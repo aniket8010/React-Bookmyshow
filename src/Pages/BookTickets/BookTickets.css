@@ -1,0 +1,61 @@
+.a_book_tickets .a_date_box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  padding: 5px;
+}
+.a_book_tickets .a_date_box h6 {
+  font-size: 14px;
+}
+.a_book_tickets .a_day,
+.a_book_tickets .a_month {
+  font-weight: 400;
+  color: #808080;
+  font-size: 10px !important;
+}
+.a_book_tickets .a_date_box:hover,
+.a_book_tickets .a_date_box:hover .a_day,
+.a_book_tickets .a_date_box:hover .a_month {
+  color: #f84464 !important;
+  cursor: pointer !important;
+}
+.a_book_tickets .a_date_box.active {
+  background: #f84464;
+  color: white !important;
+}
+.a_book_tickets .a_date_box.active .a_day,
+.a_book_tickets .a_date_box.active .a_month {
+  color: white !important;
+}
+.a_book_tickets .a_date_range_box button {
+  background: none !important;
+}
+.a_book_tickets
+  .a_date_range_box
+  .react-multiple-carousel__arrow--right::before {
+  color: black !important;
+  right: -30px !important;
+}
+
+.a_book_tickets
+  .a_date_range_box
+  .react-multiple-carousel__arrow--left::before {
+  color: black !important;
+  left: -30px !important;
+}
+.a_book_tickets .a_filter_dropdown_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.a_dropdown .a_dropdown_menu {
+  top: 17px !important;
+}
+.a_dropdown li:hover {
+  background: #80808010;
+}
+.a_dropdown input[type="checkbox"]:checked {
+  background: #F84464 !important;
+}
