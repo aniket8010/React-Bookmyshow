@@ -57,5 +57,21 @@
   background: #80808010;
 }
 .a_dropdown input[type="checkbox"]:checked {
-  background: #F84464 !important;
+  background: #f84464 !important;
+}
+.a_theater_name:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.a_info {
+  opacity: 0.8;
+}
+.a_show_btn {
+  background: none;
+  padding: 10px 25px;
+  border-radius: 3px;
+  border: 1px solid #a2a2a2;
+  font-weight: 400;
+  font-size: 13px;
+  color: #5bc36d;
 }

@@ -10,7 +10,7 @@ const BookTickets = () => {
         <div className='a_book_tickets'>
             <div className='bg-white pt-5'>
                 <div className="container">
-                    <h1 className='fw-normal'>{state?.name} - {state?.languages[0]}</h1>
+                    <h1 className='fw-normal a_cursor_pointer'>{state?.name} - {state?.languages[0]}</h1>
                     <div className='d-flex gap-2 align-items-center my-2'>
                         <button style={{ width: 27, height: 27 }} className='bg-white text-secondary border-secodary border rounded-pill a_h12'>{state?.certification}</button>
                         {state?.category?.map((ele, index) => {

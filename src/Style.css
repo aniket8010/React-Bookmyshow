@@ -21,7 +21,9 @@ body {
 body::-webkit-scrollbar{
   width: 0px !important;
 }
-
+.a_line_h1{
+  line-height: 1;
+}
 
 .roboto-thin {
     font-family: "Roboto", sans-serif;

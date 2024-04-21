@@ -73,10 +73,10 @@ export const Filters = () => {
   ]
 
   function showTimehandler(value) {
-    console.log(value, "I from showTimehandler");
+    // console.log(value, "I from showTimehandler");
   }
   function priceHandler(value) {
-    console.log(value, "I from priceHandler");
+    // console.log(value, "I from priceHandler");
   }
 
   return (
@@ -87,13 +87,12 @@ export const Filters = () => {
             {dateData?.map((ele) => {
               return <DateBox isActive={ele?.date === date} key={ele?.date}{...ele} />
             })}
-
           </Carousel>
         </div>
         <div className="col-12 col-md-5">
           <div className="row">
             <div className="col-12 col-md-4">
-              <div className="border-start p-3 h-100 a_filter_dropdown_box ">
+              <div className="border-start p-3 h-100 a_filter_dropdown_box a_cursor_pointer ">
                 <h6 className='m-0'>{state?.languages[0]}-{state?.screens[0]}</h6>
               </div>
             </div>
