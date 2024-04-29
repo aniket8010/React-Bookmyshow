@@ -180,3 +180,15 @@ export const dataCard = [
         },
     },
 ];
+export const theaterLocations = [
+    {
+        name: "Jalna",
+        screens: ["2D", "3D", "IMX 2D"],
+        languages: ["Hindi", "English", "Tamil"]
+    },
+    {
+        name: "Selu",
+        screens: ["2D"],
+        languages: ["Hindi"]
+    }
+]

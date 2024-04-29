@@ -16,7 +16,7 @@ const MoviesData = [
     description: "Hindi",
     movieDetails: {
       rating: 6.4,
-      lastDate: "2024-04-30",
+      lastDate: "2024-05-30",
       casts: [
         {
           imgPath:

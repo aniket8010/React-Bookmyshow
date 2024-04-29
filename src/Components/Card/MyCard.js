@@ -4,7 +4,6 @@ import { useNavigate } from 'react-router-dom'
 
 export const MyCard = ({ src, name, title1, title2, description, isTitle1Slice = true, isNameSlice = true, movieDetails }) => {
   const navigate = useNavigate()
-  console.log(movieDetails)
   const redirectUrlHandler = () => {
     
     //if we have the moviedetails then only redirect to the movie details page

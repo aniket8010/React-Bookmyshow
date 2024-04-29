@@ -9,3 +9,10 @@ export function findIsExist(selected = [], value, keyname) {
     if (isExist) return true
     return false
 }
+
+export function removeSpecialCharacters(value, isUpperCase = true) {
+    if (isUpperCase) {
+        value = value.toUpperCase()
+    }
+    return value?.split("-")?.join(" ")
+}

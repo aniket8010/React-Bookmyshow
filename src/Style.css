@@ -171,3 +171,6 @@ input::placeholder {
 .a_border_red_lite{
   border: 1px solid #DC354B !important;
 }
+.text-decoration-none{
+  text-decoration: none;
+}

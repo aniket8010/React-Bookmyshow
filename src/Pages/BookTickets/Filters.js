@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Carousel from 'react-multi-carousel';
 import MyDropdown from '../../Components/MyDropDown/MyDropdown';
 import { useLocation } from 'react-router-dom';
+import { removeSpecialCharacters } from '../../Lib/Helpers';
 
 const responsive = {
   superLargeDesktop: {
@@ -31,9 +32,10 @@ function DateBox({ day, date, month, isActive = false }) {
   </div>
 }
 export const Filters = () => {
-  const { state } = useLocation()
+  const { state ,search} = useLocation()
   const [dateData, setDateData] = useState([])
   let date = new Date().getDate()
+  const params =new URLSearchParams(search)
 
   useEffect(() => {
     const result = []
@@ -93,7 +95,7 @@ export const Filters = () => {
           <div className="row">
             <div className="col-12 col-md-4">
               <div className="border-start p-3 h-100 a_filter_dropdown_box a_cursor_pointer ">
-                <h6 className='m-0'>{state?.languages[0]}-{state?.screens[0]}</h6>
+                <h6 className='m-0'>{params.get("language")}-{removeSpecialCharacters(params.get("screen"))}</h6>
               </div>
             </div>
             <div className="col-12 col-md-4">
