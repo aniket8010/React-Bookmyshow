@@ -1,11 +1,15 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import "./BookTickets.css"
 import { useLocation } from 'react-router-dom'
 import { Filters } from './Filters'
 import { Theaters } from './Theaters'
+import { GlobalContext } from '../../Provider/Provider'
 const BookTickets = () => {
     const { state, search } = useLocation()
     const params = new URLSearchParams(search)
+
+    const myReducer=useContext(GlobalContext)
+    // console.log(myReducer)
     return (
         <div className='a_book_tickets'>
             <div className='bg-white pt-5'>

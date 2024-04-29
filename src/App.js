@@ -15,32 +15,29 @@ import { Offers } from "./Pages/Offers/Offers"
 import { GiftCards } from "./Pages/GiftCards/GiftCards"
 import { Details } from "./Pages/Details/Details";
 import BookTickets from "./Pages/BookTickets/BookTickets";
+import { Provider } from "./Provider/Provider";
 
 
 function App() {
-    return (
-        <>
-            <div className='bg-light'>
-                <Header />
-                <Routes>
-                    <Route path="/" element={<Movies />}></Route>
-                    <Route path="/activities" element={<Activities />}></Route>
-                    <Route path="/events" element={<Events />}></Route>
-                    <Route path="/plays" element={<Plays />}></Route>
-                    <Route path="/sports" element={<Sports />}></Route>
-                    <Route path="/stream" element={<Stream />}></Route>
-                    <Route path="/list-your-shows" element={<Shows />}></Route>
-                    <Route path="/corporates" element={<Corporates />}></Route>
-                    <Route path="/offers" element={<Offers />}></Route>
-                    <Route path="/gift-cards" element={<GiftCards />}></Route>
-                    <Route path="/details" element={<Details />}></Route>
-                    <Route path="book-tickets" element={<BookTickets />}></Route>
-                    <Route path="*" element={<h4>Page Not Found</h4>}></Route>
-                </Routes>
-                <Footer />
-            </div>
-        </>
-    )
+    return <Provider>
+        <Header />
+        <Routes>
+            <Route path="/" element={<Movies />}></Route>
+            <Route path="/activities" element={<Activities />}></Route>
+            <Route path="/events" element={<Events />}></Route>
+            <Route path="/plays" element={<Plays />}></Route>
+            <Route path="/sports" element={<Sports />}></Route>
+            <Route path="/stream" element={<Stream />}></Route>
+            <Route path="/list-your-shows" element={<Shows />}></Route>
+            <Route path="/corporates" element={<Corporates />}></Route>
+            <Route path="/offers" element={<Offers />}></Route>
+            <Route path="/gift-cards" element={<GiftCards />}></Route>
+            <Route path="/details" element={<Details />}></Route>
+            <Route path="book-tickets" element={<BookTickets />}></Route>
+            <Route path="*" element={<h4>Page Not Found</h4>}></Route>
+        </Routes>
+        <Footer />
+    </Provider>
 }
 
 export default App

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { IoMdStar } from "react-icons/io";
 import { HiOutlineChevronRight } from "react-icons/hi";
@@ -7,8 +7,10 @@ import { GoDotFill } from "react-icons/go";
 import { MdOutlineShare } from "react-icons/md";
 import AppModel from "../../Components/App Model/AppModel";
 import { theaterLocations } from "../GiftCards/E_Gift/Data";
+import { GlobalContext } from "../../Provider/Provider";
 const Banner = () => {
     const { state } = useLocation();
+    const { values, dispatch } = useContext(GlobalContext)
     // const navigate = useNavigate()
     const [openModal, setOpenModal] = useState(false);
 
@@ -25,24 +27,23 @@ const Banner = () => {
     const findTheater = theaterLocations.find((ele) => ele.name === "Jalna");
 
     function BookTicketsModalBox() {
-        console.log(state.languages.fliter);
-        const availableLanguages = state.languages.filter((lang) =>
+        const availableLanguages = values?.moviesDetails?.languages.filter((lang) =>
             findTheater.languages.includes(lang)
         );
-        const availableScreen = state.screens.filter((screen) =>
+        const availableScreen = values?.moviesDetails?.screens.filter((screen) =>
             findTheater.screens.includes(screen)
         );
         return (
             <div className="pb-2">
                 <div className="px-3">
-                    <h6 className="mt-4 a_h13 roboto-regular">{state?.name}</h6>
+                    <h6 className="mt-4 a_h13 roboto-regular">{values?.moviesDetails?.name}</h6>
                     <h5>Select Language and format</h5>
                 </div>
                 <div style={{ background: "#F2F5F9" }} className="p-2 my-3 px-3">
                     {availableLanguages.map((ele, index, arrData) => {
                         return <NavLink to={{
                             pathname: "/book-tickets",
-                            search: `title=${state?.name}&screens=${availableScreen[0]}&location=${findTheater.name}&language=${ele}`
+                            search: `title=${values?.moviesDetails?.name}&screens=${availableScreen[0]}&location=${findTheater.name}&language=${ele}`
                         }}
                             key={ele} className="text-decoration-none">{eleCommaTitle(ele, index, arrData)}</NavLink>;
                     })}
@@ -53,7 +54,7 @@ const Banner = () => {
                             <NavLink
                                 to={{
                                     pathname: "/book-tickets",
-                                    search: `?title=${state?.name}&screen=${redirectValidPath(
+                                    search: `?title=${values?.moviesDetails?.name}&screen=${redirectValidPath(
                                         ele
                                     )}&location=${findTheater.name}&language=${availableLanguages[0]}`,
                                 }}
@@ -72,7 +73,7 @@ const Banner = () => {
         <div
             className="a_movies_details"
             style={{
-                backgroundImage: `linear-gradient(90deg, rgb(26, 26, 26) 24.97%, rgb(26, 26, 26) 38.3%, rgba(26, 26, 26, 0.04) 97.47%, rgb(26, 26, 26) 100%), url(${state.bannerImgUrl})`,
+                backgroundImage: `linear-gradient(90deg, rgb(26, 26, 26) 24.97%, rgb(26, 26, 26) 38.3%, rgba(26, 26, 26, 0.04) 97.47%, rgb(26, 26, 26) 100%), url(${values?.moviesDetails?.movieDetails.bannerImgUrl})`,
             }}
         >
             <AppModel open={openModal} onClose={() => setOpenModal(false)}>
@@ -85,7 +86,7 @@ const Banner = () => {
                             <div className="col-12 col-md-4">
                                 <div>
                                     <div className="a_img_box">
-                                        <img src={state?.poster} alt="" />
+                                        <img src={values?.moviesDetails?.movieDetails?.poster} alt="" />
                                     </div>
                                     <div className="bg-dark text-center text-white py-1">
                                         <h6 className="a_h12">In cinemas</h6>
@@ -93,12 +94,12 @@ const Banner = () => {
                                 </div>
                             </div>
                             <div className="col-12 col-md-7 text-white">
-                                <h1>{state?.name}</h1>
+                                <h1>{values?.moviesDetails?.name}</h1>
                                 <div className="a_rating_box p-3 px-4 rounded-3 justify-content-between d-flex align-items-center">
                                     <div className="d-flex align-items-center">
                                         <IoMdStar size={25} className="a_redlite_color2 shadow" />
                                         <h6 className="m-0 ms-3 a_h17">
-                                            {state?.rating}/10 ({state?.votes} Votes)
+                                            {values?.moviesDetails?.movieDetails?.rating}/10 ({values?.moviesDetails?.movieDetails?.votes} Votes)
                                         </h6>
                                         <HiOutlineChevronRight size={18} />
                                     </div>
@@ -108,7 +109,7 @@ const Banner = () => {
                                 </div>
                                 <div className="a_screen_box d-flex gap-2">
                                     <div className="a_screen d-flex gap-1 p-1 px-2 bg-light text-black">
-                                        {state?.screens?.map((ele, index, arrData) => {
+                                        {values?.moviesDetails?.movieDetails?.screens?.map((ele, index, arrData) => {
                                             return (
                                                 <Link
                                                     key={ele}
@@ -121,7 +122,7 @@ const Banner = () => {
                                         })}
                                     </div>
                                     <div className="a_lang d-flex gap-1 p-1 px-2 bg-light text-black ">
-                                        {state?.languages?.map((ele, index, arrData) => {
+                                        {values?.moviesDetails?.movieDetails?.languages?.map((ele, index, arrData) => {
                                             return (
                                                 <Link
                                                     key={ele}
@@ -136,11 +137,11 @@ const Banner = () => {
                                 </div>
                                 <div className="a_duration_box my-4 a_h17 d-flex align-items-center gap-2 text-white">
                                     <span>
-                                        {state?.slugInfo?.duration}
+                                        {values?.moviesDetails?.movieDetails?.slugInfo?.duration}
                                         <GoDotFill size={10} />{" "}
                                     </span>
                                     <div className="d-flex gap-1">
-                                        {state?.slugInfo?.category?.map((ele, index, arrData) => {
+                                        {values?.moviesDetails?.movieDetails?.slugInfo?.category?.map((ele, index, arrData) => {
                                             return (
                                                 <Link
                                                     key={ele}
@@ -154,10 +155,10 @@ const Banner = () => {
                                     </div>
                                     <span>
                                         <GoDotFill size={10} />
-                                        {state?.slugInfo?.certification}
+                                        {values?.moviesDetails?.movieDetails?.slugInfo?.certification}
                                         <GoDotFill size={10} />
                                     </span>
-                                    <span>{state?.slugInfo?.releaseData}</span>
+                                    <span>{values?.moviesDetails?.movieDetails?.slugInfo?.releaseData}</span>
                                 </div>
                                 {findTheater && (
                                     <button
